@@ -1,0 +1,8 @@
+/* Universal Box Sizing & Margin Reset */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
