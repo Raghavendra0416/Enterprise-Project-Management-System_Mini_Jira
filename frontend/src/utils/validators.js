@@ -1,3 +1,12 @@
+export const validateUsername = (username) => {
+    if (!username) return 'Username is required';
+    if (username.length < 3) return 'Username must be at least 3 characters';
+    if (!/^[a-zA-Z][a-zA-Z0-9_]*$/.test(username)) {
+        return 'Username must start with a letter and contain only letters, numbers, underscores';
+    }
+    return '';
+};
+
 export const validateEmail = (email) => {
     if (!email) return 'Email is required';
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
